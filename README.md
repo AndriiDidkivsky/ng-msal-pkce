@@ -1,27 +1,22 @@
-# Msal2
+# ng-msal-pkce
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+The very basic example of usage angular with msal-browser.
 
-## Development server
+Project generated with [angular-cli](https://angular.io/cli) please check the documentation.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Structure
+App consists of two pages  
+- Home  - protected by auth guard
+- About - not protected by auth guard
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Button on the home page sent request to ms-graph  
+All auth code under the `authentication`  folder  
+Also check `app-initializer.ts` here we're waiting until msal get ready
+## Configuration
 
-## Build
+You can run the sample by changing the `auth-config.ts` file to match your app registration and  
+running the npm command npm start in the project folder.  
+Also check `msal-browser` [documentation](https://www.npmjs.com/package/@azure/msal-browser) and create new app registration on Azure.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+##### Please note! It's currently working only in B2B scenarios check documentation above.
